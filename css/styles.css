@@ -67,8 +67,13 @@ table {
 	--white: #ffffff;
 	--black: #000000;
 	--primary-font: 'Roboto',	
-body {
-	width: 100%;
+
+	/* ------ 	CSS ROOT VARIABLES ------ */
+
+/*   -- This site is meant to be a single page, fixed 1280px wide site.  -----  */
+
+	body {
+	width: 1280px; /* Adjust to 1440px if needed*/
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -84,8 +89,8 @@ label{
 	background-color: #F5F5F5;
 	border-radius: 10px;
 	Cursor: pointer;
-	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
-	0px -5 15px rgba(255,255,255,0.3);	
+	box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.3),
+	0 -5px 15px rgba(255,255,255,0.3);	
 }
 
 label:after{
@@ -114,7 +119,7 @@ input:checked ~ label{
 	position: absolute;
 	width: 100%;
 	height: 100vh;
-	/*background: #A6A6A7*/
+	background: #A6A6A7;
 	z-index: -1;
 	transition: 0.5s;
 }
@@ -126,6 +131,10 @@ input:checked + label + .background{
 input{
 	display: none;
 }
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 main{
@@ -139,5 +148,5 @@ img {
 nav {
 	margin: 0 auto;
 	padding: 0.5rem 0;
-	text-align: right #F5F5F5;
+	text-align: right;
 }
