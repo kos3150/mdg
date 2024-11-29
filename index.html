@@ -100,8 +100,7 @@
 </header>
     <main>
         <!-- ADD IMAGES HERE -->
-    
-        <section id="about">
+    <section id="about">
         <!-- ADD IMAGES HERE -->
         <h2>About</h2>
             <p>I was born in Pasadena, California. I studied Graphic Information Technology, Graphic Design, and Photography at Arizona State University, where I earned my Bachelor of Science Degree in Graphic Information Technology.</p>
@@ -280,63 +279,122 @@
             </dl>
         </section>
 
-        <section id="products">
-            <h2>Product Display</h2>
+        <section id="switcher1">
+            <h2>Product Switcher Example 1</h2>
+            <section id="product1" class="currentItem">
+                <h3>A) Kimmy Smock Tee Shirts Item 1</h3>
+                    <img src="images/ks-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                        <p>Paragraph describing item</p>
         </section>
-        <section>
-            <h2>A) Kimmy Smock Tee Shirts</h2>
-        <figure>
-            <img src="images/ks-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250">
-                <figcaption>KS Men's 100% Cotton Tee $24.95</figcaption>
-        </figure>
-            <dl>
-                <dt>Client</dt>
-                <dd>KimmySmock.com</dd>
-                <dt>Los Angeles, California</dt>
-                <dd>USA</dd>
-            </dl>
         </section>
-        <section>
-            <h2>B) Media Group Tee Shirts</h2>
-        <figure>
-            <img src="images/m-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250">
-                <figcaption>Men's 100% Cotton Tee $24.95</figcaption>
-        </figure>
-            <dl>
-                <dt>Client</dt>
-                <dd>Media Group</dd>
-                <dt>Los Angeles, California</dt>
-                <dd>USA</dd>
-            </dl>
+        
+        <section id="product2" class="hiddenItem">
+            <h3>B) Media Group Tee Shirts Item 2</h3>
+                <img src="images/m-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                    <p>Paragraph describing item</p>
         </section>
-        <section>
-            <h2>C) Just Say Win! Tee Shirts</h2>
-        <figure>
-            <img src="images/m-tee-shirt-002.png" alt="The Media Design Group Logo Description" width="250" height="250">
-                <figcaption>Men's 100% Cotton Tee $24.95</figcaption>
-        </figure>
-            <dl>
-                <dt>Client</dt>
-                <dd>Media Group</dd>
-                <dt>Los Angeles, California</dt>
-                <dd>USA</dd>
-            </dl>
+        
+        <section id="product3" class="hiddenItem">
+            <h3>C) Just Say Win! Tee Shirts Item 3</h3>
+                <img src="images/m-tee-shirt-002.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                    <p>Paragraph describing item</p>
         </section>
-        <section>
-            <h2>D) Media Promo Tee Shirts</h2>
-        <figure>
-            <img src="images/m-tee-shirt-003.png" alt="The Media Design Group Logo Description" width="250" height="250">
-                <figcaption>Men's 100% Cotton Tee $24.95</figcaption>
-        </figure>
-            <dl>
-                <dt>Client</dt>
-                <dd>Media Group</dd>
-                <dt>Los Angeles, California</dt>
-                <dd>USA</dd>
-            </dl>
+
+        <section id="product4" class="hiddenItem">
+            <h3>D) Media Promo Tee Shirts</h3>
+                <img src="images/m-tee-shirt-003.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                    <p>Paragraph describing item</p>
         </section>
-            
-        </main>
+
+        <section id="switcherButtons">
+            <h2 class="sr-only">Click on a Button to View a Product</h2>
+            <button id="btn1">View Item 1</button>
+            <button id="btn2">View Item 2</button>
+            <button id="btn3">View Item 3</button>
+            <button id="btn4">View Item 4</button>
+        </section>
+
+        <section id="game1">
+                    <div>
+                <h2>Guessing Game Example 1</h2>
+                <form>
+                    <label for="numGuess">Enter a Number Between 1 and 10</label>
+                    <span class="message">Please enter a number from 1 to 10</span>
+                    <input type="number" id="numGuess" name="numGuess">
+                    <input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
+                </form>
+                <section id="gameDisplay">
+                    <h3>Guess a Number!</h3>
+                    <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win!</p>
+                    <p id="gameOutput">This is where the random number and user guess would display, along with a message about whether they won or not.</p>
+                </section>
+                    </div>
+                </section>
+                <section id="game2">
+                    <div>
+                        <h2>Guessing Game Example 2</h2>
+                        <p>Enter a number between 1 and 10 in the box below and click the button to play. If your number matches, you win!</p>
+                    <form>
+                        <label for="numGuess2">Enter a Number Between 1 and 10:</label>
+                        <span class="message">Please enter a number from 1 to 10</span>
+                        <input type="number" name="numGuess2" id="numGuess2">
+                        <input type="submit" name="guessGame2" id="guessGame2" value="Play the Game!">
+                    </form>
+                    <section id="gameDisplay2">
+                        <h3 class="sr-only">Guess a Number!</h3>
+                        <ul id="gameOutput2">
+                            <li id="userNum"><span>5</span>Your Guess</li>
+                            <li id="randomNum"><span>10</span>Winning Number</li>
+                        </ul>
+                        <p id="gameMessage">Message about winning or losing the game</p>
+                    </section>
+                    </div>
+                </section>
+
+                <section id="cart1">
+                    <h2>Shopping Cart Example 1</h2>
+                    <section id="products1">
+                        <h3 class="sr-only">Products</h3>
+                        <section>
+                            <img src="images/ks-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250"> 
+                            <h4>Kimmy Smock Tee Shirts</h4>
+                            <p>$24.95</p>
+                            <button id="pn1">Add to Cart</button>
+                        </section>
+                        <section>
+                            <img src="images/m-tee-shirt-001.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                            <h4>Media Group Tee Shirts</h4>
+                            <p>$24.95</p>
+                            <button id="pn2">Add to Cart</button>
+                        </section>
+                        <section>
+                            <img src="images/m-tee-shirt-002.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                            <h4>Just Say Win! Tee Shirts</h4>
+                            <p>$24.95</p>
+                            <button id="pn3">Add to Cart</button>
+                        </section>
+                        <section>
+                            <img src="images/m-tee-shirt-003.png" alt="The Media Design Group Logo Description" width="250" height="250">
+                            <h4>Media Promo Tee Shirts</h4>
+                            <p>$24.95</p>
+                            <button id="pn4">Add to Cart</button>
+                        </section>
+                        </section>
+                        <section id="totals1">
+                            <h3>Cart</h3>
+                            <ul id="itemList1">
+                                <li>Your Cart is Empty</li>
+                            </ul>
+                            <ul>
+                                <li id="subtotal1">Subtotal: <span>$0.00</span></li>
+                                <li id="tax1">Tax: <span>$0.00</span></li>
+                                <li id="shipping1">Shipping: <span>$0.00</span></li>
+                                <li id="total1">Total: <span>$0.00</span></li>
+                            </ul>
+                            <button id="checkout1">Checkout</button>
+                        </section>
+                        </section>
+                    </main>
     
         <section id="contact">
         <h3>Contact Us</h3>

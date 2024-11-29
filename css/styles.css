@@ -81,6 +81,10 @@ table {
 	flex-direction: column;
 }
 
+header, main, footer {
+	padding: 20px;
+}
+	
 label{
 	position: relative;
 	width: 480px;
