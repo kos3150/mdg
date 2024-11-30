@@ -79,10 +79,107 @@ table {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	font-family: "Roboto", sans-serif;
+	font-size: 2rem;
 }
 
 header, main, footer {
+	
+	background-color: var(--light-gray);
 	padding: 20px;
+}
+
+header h1 {
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+header nav {
+	text-align: center;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+header nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+header nav a {
+	color: var(--black);
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+/* Main content styles */
+main {
+	font-family: var(--font-family);
+	padding: 20px;
+}
+
+main section {
+	font-family: var(--font-family);
+	margin-bottom: 20px;
+}
+
+main section h2 {
+	var(--heading-font)
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+main img {
+	max-width: 100%;
+	height: auto;
+}
+
+main dl {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
+main dt {
+	flex: 1;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+main dd {
+	flex: 1;	
+}
+
+#portfolio section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#portfolio section img {
+	margin-bottom: 10px;
+}
+
+#switcherButton button {
+	background-color: var(--light-orange);
+	color: var(--white);
+	border: 1px solid var(--black);
+	padding: 10px 20px;
+	cursor: pointer;
+	margin: 5px;
 }
 	
 label{
