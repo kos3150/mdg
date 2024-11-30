@@ -54,10 +54,10 @@ table {
 
 /* ------ END OF CSS RESET ------ */
 
-/* ------ CSS ROOT VARIABLES ------ */
+/* ------ CSS VARIABLES ------ */
 :root {
 	--font-family: 'Roboto', sans-serif;
-	--heading-font: 'Roboto', black sans-serif;
+	--heading-font: 'Roboto', 'Roboto Black', sans-serif;
 	--font-size: 16px;	
 	--red: #f00;
 	--orange: #FF6633;
@@ -72,8 +72,12 @@ table {
 
 /*   -- This site is meant to be a single page, fixed 1280px wide site.  -----  */
 
-	body {
-	width: 1280px; /* Adjust to 1440px if needed*/
+body{
+	font-family: 'Roboto', sans-serif;
+	heading-font: 'Roboto Black', 
+	sans-serif;
+	color: var(--red);
+	box-sizing: border-box;
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -81,12 +85,16 @@ table {
 	flex-direction: column;
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto", Robot Black, sans-serif;
+	font-size: 16px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4{
+	font-wight: bold;
 }
 
 h1 {
-	font-family: "Roboto", sans-serif;
-	color: var(var(--red));
 	font-size: 2rem;
 }
 
@@ -98,8 +106,12 @@ header, main, footer {
 
 header h1 {
 	font-size: 2rem;
-	font-weight: 900;
+	font-weight: 400;
 	text-align: center;
+}
+
+h2{
+	font-size: 1.75em;
 }
 
 header nav {
@@ -120,10 +132,7 @@ header nav li {
 }
 
 header nav a {
-	color: var(var(--red));
-	text-weight: bold;
 	text-decoration: none;
-	hover: var(--light-orange);
 	font-size: 1.2rem;
 }
 
@@ -245,11 +254,21 @@ main{
 }
 
 img {
+	display: block;
 	max-width: 100%;
+	border: 1px solid var(--black);
+	border-radius: 5px;
+	text-align: center;
+}
+
+p{
+	font-family: var(--font-family);
+	font-size: 16px;
 }
 
 nav {
 	margin: 0 auto;
 	padding: 0.5rem 0;
 	text-align: right;
+}
 }
