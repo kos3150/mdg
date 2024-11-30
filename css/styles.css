@@ -1,7 +1,10 @@
 /* Kim Smock CSS Style Sheet */
 
 /* ----- ADD GOOGLE FONTS HERE ----- */
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&display=swap');
+
 /* ------ CSS RESET ------ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
@@ -53,222 +56,26 @@ table {
 }
 
 /* ------ END OF CSS RESET ------ */
-
 /* ------ CSS VARIABLES ------ */
-:root {
-	--font-family: 'Roboto', sans-serif;
-	--heading-font: 'Roboto', 'Roboto Black', sans-serif;
-	--font-size: 16px;	
-	--red: #f00;
-	--orange: #FF6633;
-	--light-orange: #F7931E;
-	--light-gray: #A6A6A7;
-	--white: #F5F5F5;
-	--white: #ffffff;
-	--black: #000000;
-	--primary-font: 'Roboto',	
-
-	/* ------ 	CSS ROOT VARIABLES ------ */
-
-/*   -- This site is meant to be a single page, fixed 1280px wide site.  -----  */
-
-body{
-	font-family: 'Roboto', sans-serif;
-	heading-font: 'Roboto Black', 
-	sans-serif;
-	color: var(--red);
+:root{
+	--bark: #262223;
+	--red: #f25e3d;
+	--dk-orange: #f2994b;
+    --orange: #ffb30d;
+	--med-gray: #7a7a7a;
+    --gray: #b4bec9;
+    --tan: #c2c0a6;
+	--lt-tan: #f2ede4;
+    --off-white: #ffffff;
+	
+	--font-family: dm-sans, verdana, sans-serif;
+	line-height: 1.5;
 	box-sizing: border-box;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	margin: 0;
-	padding: 0;
-	font-family: "Roboto", Robot Black, sans-serif;
-	font-size: 16px;
-}
 
-/* Heading styles */
-h1, h2, h3, h4{
-	font-wight: bold;
-}
+	--font-family: oswald, arial, sans-serif;
 
-h1 {
-	font-size: 2rem;
+	--heading-fonts: dm-sans, verdana, sans-serif;
+	--body-fonts: arial, verdana, sans-serif;
 }
-
-header, main, footer {
-	
-	background-color: var(--light-gray);
-	padding: 20px;
-}
-
-header h1 {
-	font-size: 2rem;
-	font-weight: 400;
-	text-align: center;
-}
-
-h2{
-	font-size: 1.75em;
-}
-
-header nav {
-	text-align: center;
-}
-
-header nav ul {
-	list-style: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-}
-
-header nav li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-header nav a {
-	text-decoration: none;
-	font-size: 1.2rem;
-}
-
-/* Main content styles */
-main {
-	font-family: var(--font-family);
-	padding: 20px;
-}
-
-main section {
-	font-family: var(--font-family);
-	margin-bottom: 20px;
-}
-
-main section h2 {
-	font-family: var(--heading-font);
-	font-size: 1.5rem;
-}
-
-main img {
-	max-width: 100%;
-	height: auto;
-}
-
-main dl {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-}
-
-main dt {
-	flex: 1;
-	font-weight: bold;
-	margin-right: 5px;
-}
-
-main dd {
-	flex: 1;	
-}
-
-#portfolio section {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-#portfolio section img {
-	margin-bottom: 10px;
-}
-
-#switcherButton button {
-	background-color: var(--light-orange);
-	color: var(--white);
-	border: 1px solid var(--black);
-	padding: 10px 20px;
-	cursor: pointer;
-	margin: 5px;
-}
-	
-label{
-	position: relative;
-	width: 480px;
-	height: 480px;
-	display: block;
-	background-color: #F5F5F5;
-	border-radius: 10px;
-	Cursor: pointer;
-	box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.3),
-	0 -5px 15px rgba(255,255,255,0.3);	
-}
-
-label:after{
-	content: '';
-	position: absolute;
-	height: 160px;
-	width: 160px;
-	background-color: #A6A6A7;
-	border-radius: 100px;
-	top: 10px;
-	left: 10px;
-	transition: 0.5s;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);	
-}
-
-input:checked ~ label:after{
-	left: 470px;
-	transform: translateX(-100%);
-	background: linear-gradient(180deg, #777, #3a3a3a);
-}
-
-input:checked ~ label{
-	background: #A6A6A7;
-}
-.background{
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	background: #A6A6A7;
-	z-index: -1;
-	transition: 0.5s;
-}
-
-input:checked + label + .background{
-	background: #A6A6A7;	
-}
-
-input{
-	display: none;
-}
-
-.container{
-	max-width: 1280px;
-	margin: 0 auto;
-}
-
-main{
-	background-color: #F5F5F5;
-}
-
-img {
-	display: block;
-	max-width: 100%;
-	border: 1px solid var(--black);
-	border-radius: 5px;
-	text-align: center;
-}
-
-p{
-	font-family: var(--font-family);
-	font-size: 16px;
-}
-
-nav {
-	margin: 0 auto;
-	padding: 0.5rem 0;
-	text-align: right;
-}
-}
+/* ------ END OF CSS VARIABLES ------ */
+/* ------ CSS STYLES ------ */
