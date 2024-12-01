@@ -25,7 +25,6 @@ function NewObject(prefix)
     }
 }
 
-
 var obj=new NewObject("Message : ");
 obj.SayHello("You are welcome.");
 
@@ -33,11 +32,22 @@ obj.SayHello("You are welcome.");
 						
 // Use document.getElementById("id").innerHTML to select the element with the ID dark-mode-toggle.
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const background = document.querySelector('.background');
 
-const enableDarkMode = () => {
+darkModeToggle.addEventListener('click', () => {
+  const isDarkModeEnabled = document.body.classList.contains('dark-mode');
+  if (isDarkModeEnabled) {
+     disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+});
+
+function enableDarkMode() {
   document.body.classList.add('dark-mode');
+  background.style.display = 'block';
   localStorage.setItem('dark-mode', 'enabled');
-};
+}
 // The disableDarkMode function removes the dark-mode class from the body element and removes the dark-mode key from localStorage.
 const disableDarkMode = () => {
   document.body.classList.remove('dark-mode');
@@ -53,19 +63,21 @@ darkModeToggle.addEventListener('click', () => {
   }
 });
 
-// Check for dark mode preference in localStorage on page load
+function enableDarkMode() {
+  document.body.classList.add('dark-mode');
+  background.style.display = 'block'; // Show the background overlay
+  localStorage.setItem('dark-mode', 'enabled');
+}
+
+function disableDarkMode() {
+  document.body.classList.remove('dark-mode');
+  background.style.display = 'none'; // Hide the background overlay
+  localStorage.removeItem('dark-mode'); // Corrected ('dark-Mode to dark-mode')
+}
+
 const darkModePreference = localStorage.getItem('dark-mode');
 if (darkModePreference === 'enabled') {
   enableDarkMode();
 }
 
-function removeDarkMode() {
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  darkModeToggle.style.display = 'none';
-}
-removeDarkMode();
-function addDarkMode() {
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  darkModeToggle.style.display = 'block';
-}
-
+// No need for remove DarkMode() function anymore
