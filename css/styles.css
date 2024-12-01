@@ -375,5 +375,49 @@ main{
 	align-items: center;
 }
 
+/*  Styles for guessing game*/
+#game1, #game2 {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#game1 form, #game2 form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#game1 .message, #game2 .message {
+	color:#f25e3d;
+	font-style: italic;
+	margin-bottom: 10px;
+	display: none;
+}
+
+#game1 input[type="submit"], #game2 input[type="submit"] {
+	margin-top: 10px;
+}
+
+#game1 p, #game2 p {
+	margin-bottom: 10px;
+}
+
+#gameOutput, #gameOutput2 {
+	margin-bottom: 10px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+
 
 
