@@ -134,15 +134,15 @@ h1, h2, h3, h4{
 h2{
 	font-size: 24px;
 	margin:10px;
-	padding-left: 100px;
-	padding-right: 125px;
+	padding-left: 110px;
+	padding-right: 325px;
 }
 
 p{
 	font-size: 16px;
 	line-height: 1.5;
-	margin-bottom: 20px;
-	padding-left: 100px;
+	margin-bottom: 10px;
+	padding-left: 120px;
 	padding-right: 325px;
 }
 
@@ -163,7 +163,22 @@ img {
 #section dt {
 	font-weight: bold;
 }
+/*  PORTFOLIO SECTION  */
+#portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 
+#portfolio section {
+	flex: 0 0 48%; /* Adjust the width as needed */
+	margin-bottom: 20px;
+}
+
+#portfolio h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
 #portfolio figure {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -172,8 +187,26 @@ img {
 	padding: 100px;
 }
 
+#portfolio img {
+	width: 100%;
+	height: auto;
+}
+
+#portfolio figcaption {
+	font-style: italic;
+	margin-top: 5px;
+}
+
+#portfolio p {
+	margin-bottom: 10px;
+}
+
 #portfolio dl {
 	margin-top: 10px;
+}
+
+#portfolio dt {
+	font-weight: bold;
 }
 
 /*----   Product Switcher  ----*/
