@@ -117,8 +117,12 @@ a{
 }
 
 #content {
-	padding-left: 125px;	
+	padding-left: 125px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #b4bec9;	
 }
+
 
 h1, h2, h3, h4{
 	font-weight: bold;
@@ -133,6 +137,16 @@ h2{
 	padding-left: 110px;
 	padding-right: 325px;
 }
+
+header h2 {
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+
+header p {
+	color: #7a7a7a;
+	
+}	
 
 p{
 	font-size: 16px;
@@ -182,7 +196,7 @@ p{
 
 #portfolio img {
 	height: auto;
-	padding-left: 125px;
+	
 }
 
 #portfolio figcaption {
