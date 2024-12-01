@@ -138,6 +138,21 @@ h2{
 	padding-right: 325px;
 }
 
+header {
+	background-color:#262223;
+	padding: 20px;
+}
+
+header a {
+	text-decoration: none;
+	color: #ffffff;	
+}
+
+header h1 {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
 header h2 {
 	padding-left: 0px;
 	margin-bottom: 10px;
@@ -145,8 +160,93 @@ header h2 {
 
 header p {
 	color: #7a7a7a;
-	
-}	
+	text-align: center;
+	font-style: italic;	
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* -- NAVIGATION STYLES -- */
+nav {
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav li address{
+	color: #ffffff;
+}
+
+/* -- MAIN CONTENT AREA STYLES -- */
+
+main {
+	padding: 20px;
+}
+
+main section {
+	margin-bottom: 20px;
+}
+
+main h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+main dl {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+main dt {
+	flex: 1;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+main dd {
+	flex: 1;
+}
+
+main figure {
+	margin-bottom: 20px;
+	padding: 125px;
+}
+
+main figcaption {
+	font-style: italic;
+	text-align: center;
+}
+
+/*  Styles for images*/
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*   Styles for buttons*/
+button {
+	background-color: #f25e3d;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #f2994b;
+}
+
+
+
 
 p{
 	font-size: 16px;
@@ -224,6 +324,28 @@ p{
 }
 
 /*  ---- Product Switcher  ----   */
+#productSwitcherExample1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#productSwitcherExample1 section {
+	width: calc(33% - 20px);
+	margin-bottom: 20px;
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+#productSwitcherExample1 .currentItemk {
+	background-color: #f2994b;
+}
+
+#productSwitcherExample1 button {
+	margin-bottom: 10px;
+}
+
 #switcher1 {
 	display: flex;
 	align-items: center;
