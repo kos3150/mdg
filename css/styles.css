@@ -79,3 +79,84 @@ table {
 }
 /* ------ END OF CSS VARIABLES ------ */
 /* ------ CSS STYLES ------ */
+
+/*-- GENERAL STYLES --*/
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #262223;
+	margin: 0;
+	padding: 0;
+}
+
+
+nav ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	gap: 2rem;
+	padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+ /* LINK STYLES */
+a{
+	display: block
+}
+
+header svg{
+	width: 75px;
+	height: 75px
+}
+
+header > a:hover{
+	margin-left: 1.25rem;
+}
+
+h1, h2, h3, h4{
+	font-weight: bold;
+	margin: 0.5rem;
+	color:#262223;
+	font-family: var(--Dm-Sans, Verdana, sans-serif)
+}
+
+h2{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+p{
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+/*--Section Styles--*/
+#about, #portfolio, #contact {
+	padding: 20px;
+}
+#about dl {
+	margin-top: 20px;
+}
+
+#portfolio figure {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+#portfolio dl {
+	margin-top: 10px;
+}
+
+/*----   Product Switcher Styles   ----*/
+#switcher1 section {
+	border: 1px solid #f2f2f2;
+	padding: 20px;
+	margin-bottom: 20px;
+}
