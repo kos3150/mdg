@@ -184,3 +184,50 @@ guessForm2.addEventListener('submit', (event) => {
   const shipping = document.getElementById('shipping1');
   const total = document.getElementById('total1');
   const checkoutButton = document.getElementById('checkout1');
+
+  let cart = [];
+
+  addToCartButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const product = products[index];
+      const productName = product.querySelector('h4').textContent;
+      const productPrice = parseFloat(product.querySelector('p').textContent.replace('$', ''));
+
+      const existingItem = cart.find(item => item.name === productName);
+
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ 
+          name: productName, 
+          price: productPrice, 
+          quantity: 1 
+        });
+      }
+
+        updateCart();
+        });
+      });
+
+      function updateCart() {
+        cartItems.innerHTML = '';
+        let subtotalAmount = 0;
+
+        cart.forEach(item => {
+          const listItem = document.createElement('li');
+          li.textContent = `${item.quantity} x ${item.name} - $${item.price * item.quantity}`;
+          cartItems.appendChild(li);
+
+          subtotalAmount += item.price * item.quantity;
+        });
+
+        const taxAmount = subtotalAmount * 0.8; // Assuming a tax rate of 8%
+        const shippingCost = 10; // Assuming a flat shipping cost of $10
+        const totalAmount = subtotalAmount + taxAmount + shippingCost;
+
+        subtotal.textContent = `Subtotal: $${subtotalAmount.toFixed(2)}`;
+        tax.textContent = `Tax: $${taxAmount.toFixed(2)}`;
+        shipping.textContent = `Shipping: $${shippingCost.toFixed(2)}`;
+
+        checkoutButton.disabled = cart.length === 0;
+      }
