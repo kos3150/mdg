@@ -30,7 +30,7 @@ obj.SayHello("You are welcome.");
 
 // End of JavaScript Obfuscator
 						
-// Use document.getElementById("id").innerHTML to select the element with the ID dark-mode-toggle.
+// Use document.getElementById("id").innerHTML to select the element with the ID light and dark-mode-toggle.
 
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
@@ -45,7 +45,7 @@ if (isDarkMode) {
 
 darkModeToggle.addEventListener('click', () => {
   if (body.classList.contains('dark-mode')) {
-     disableDarkMode();
+    disableDarkMode();
   } else {
     enableDarkMode();
   }
@@ -56,18 +56,12 @@ function enableDarkMode() {
   localStorage.setItem('dark-mode', 'enabled');
 }
 
-function enableDarkMode() {
-  document.body.classList.add('dark-mode');
-  background.style.display = 'block'; // Show the background overlay
-  localStorage.setItem('dark-mode', 'enabled');
-}
-
 function disableDarkMode() {
   body.classList.remove('dark-mode');
-  localStorage.removeItem('dark-mode'); // Corrected ('dark-Mode to dark-mode')
+  localStorage.removeItem('dark-mode');
 }
 
-// No need for remove DarkMode() function
+// No need to remove DarkMode() function
 
 // Product sections and buttons
 const product1 = document.getElementById('product1');
