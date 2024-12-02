@@ -104,3 +104,71 @@ function showProduct(productToShow) {
   productToShow.classLIst.remove('hiddenItem');
   productToShow.classList.add('currentItem');
 }
+
+// Event listeners for the buttons
+
+btn1.addEventListener('click', () => showProduct(product1));
+btn2.addEventListener('click', () => showProduct(product2));
+btn3.addEventListener('click', () => showProduct(product3));
+btn4.addEventListener('click', () => showProduct(product4));
+
+// Show the first product
+
+showProduct(product1);
+
+const guessForm1 = document.getElementById('guessGame');
+const guessInput1 = document.getElementById('numGuess');
+const gameOutput1 = document.getElementById('gameOutput');
+
+guessForm1.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  const userGuess = parseInt(guessInput1.value);
+
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+    gameOutput1.textContent = 'Please enter a valid number between 1 and 10.';
+    return;
+  }
+  
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+  if (userGuess === randomNumber) {
+    gameOutput1.textContent = `Congratulations! You guessed the number ${randomNumber}.`;
+  } else {
+    gameOutput1.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`;
+  }
+  
+  guessInput1.value = '';
+});
+
+// Guessing Game 2
+
+const guessForm2 = document.getElementById('guessGame2');
+const guessInput2 = document.getElementById('numGuess2');
+const userNumDisplay = document.getElementById('userNum');
+const randomNumDisplay = document.getElementById('randomNum');
+const gameMessage = document.getElementById('gameMessage');
+
+guessForm2.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const userGuess = parseInt(guessInput2.value);
+
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+    gameMessage.textContent = 'Please enter a valid number between 1 and 10.';
+    return;
+  }
+
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+  userNumDisplay.textContent = `Your guess: ${userGuess}`;
+  randomNumDisplay.textContent = `Winning Number: ${randomNumber}`;
+
+  if (userGuess === randomNumber) {
+    gameMessage.textContent = 'Congratulations! You guessed the number.';
+  } else {
+    gameMessage.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`; 
+  }
+
+  guessInput2.value = ''; 
+  });
