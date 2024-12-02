@@ -80,4 +80,27 @@ if (darkModePreference === 'enabled') {
   enableDarkMode();
 }
 
-// No need for remove DarkMode() function anymore
+// No need for remove DarkMode() function
+
+// Product sections and buttons
+const product1 = document.getElementById('product1');
+const product2 = document.getElementById('product2');
+const product3 = document.getElementById('product3');
+
+const product4 = document.getElementById('product4');
+
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+
+// Function to show a specific product and hide the others
+function showProduct(productToShow) {
+  product1.classList.add('hiddenItem');
+  product2.classList.add('hiddenItem');
+  product3.classList.add('hiddenItem');
+  product4.classList.add('hiddenItem');
+
+  productToShow.classLIst.remove('hiddenItem');
+  productToShow.classList.add('currentItem');
+}
