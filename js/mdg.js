@@ -106,7 +106,6 @@ function showProduct(productToShow) {
 }
 
 // Event listeners for the buttons
-
 btn1.addEventListener('click', () => showProduct(product1));
 btn2.addEventListener('click', () => showProduct(product2));
 btn3.addEventListener('click', () => showProduct(product3));
@@ -123,14 +122,14 @@ const gameOutput1 = document.getElementById('gameOutput');
 guessForm1.addEventListener('submit', (event) => {
   event.preventDefault();
   
-  const userGuess = parseInt(guessInput1.value);
+const userGuess = parseInt(guessInput1.value);
 
   if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
     gameOutput1.textContent = 'Please enter a valid number between 1 and 10.';
     return;
   }
   
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
+const randomNumber = Math.floor(Math.random() * 10) + 1;
 
   if (userGuess === randomNumber) {
     gameOutput1.textContent = `Congratulations! You guessed the number ${randomNumber}.`;
@@ -152,14 +151,14 @@ const gameMessage = document.getElementById('gameMessage');
 guessForm2.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const userGuess = parseInt(guessInput2.value);
+const userGuess = parseInt(guessInput2.value);
 
   if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
     gameMessage.textContent = 'Please enter a valid number between 1 and 10.';
     return;
   }
 
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
+const randomNumber = Math.floor(Math.random() * 10) + 1;
 
   userNumDisplay.textContent = `Your guess: ${userGuess}`;
   randomNumDisplay.textContent = `Winning Number: ${randomNumber}`;
@@ -189,11 +188,11 @@ guessForm2.addEventListener('submit', (event) => {
 
   addToCartButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      const product = products[index];
-      const productName = product.querySelector('h4').textContent;
-      const productPrice = parseFloat(product.querySelector('p').textContent.replace('$', ''));
+  const product = products[index];
+  const productName = product.querySelector('h4').textContent;
+  const productPrice = parseFloat(product.querySelector('p').textContent.replace('$', ''));
 
-      const existingItem = cart.find(item => item.name === productName);
+  const existingItem = cart.find(item => item.name === productName);
 
       if (existingItem) {
         existingItem.quantity++;
@@ -221,9 +220,9 @@ guessForm2.addEventListener('submit', (event) => {
           subtotalAmount += item.price * item.quantity;
         });
 
-        const taxAmount = subtotalAmount * 0.8; // Assuming a tax rate of 8%
-        const shippingCost = 10; // Assuming a flat shipping cost of $10
-        const totalAmount = subtotalAmount + taxAmount + shippingCost;
+  const taxAmount = subtotalAmount * 0.8; // Assuming a tax rate of 8%
+  const shippingCost = 10; // Assuming a flat shipping cost of $10
+  const totalAmount = subtotalAmount + taxAmount + shippingCost;
 
         subtotal.textContent = `Subtotal: $${subtotalAmount.toFixed(2)}`;
         tax.textContent = `Tax: $${taxAmount.toFixed(2)}`;
@@ -240,13 +239,13 @@ guessForm2.addEventListener('submit', (event) => {
 
       // Contact Form Functionality
 
-      const contactFormm = document.getElementById('contactForm');
-      const nameInput = document.getElementById('my-name');
-      const emailInput = document.getElementById('my-email');
-      const phoneInput = document.getElementById('my-phone');
-      const nameError = document.getElementById('nameError');
-      const emailError = document.getElementById('emailError');
-      const phoneError = document.getElementById('phoneError');
+  const contactFormm = document.getElementById('contactForm');
+  const nameInput = document.getElementById('my-name');
+  const emailInput = document.getElementById('my-email');
+  const phoneInput = document.getElementById('my-phone');
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const phoneError = document.getElementById('phoneError');
 
       contactFormm.addEventListener('submit', (event) => {
         let isValid = true;
@@ -284,8 +283,7 @@ guessForm2.addEventListener('submit', (event) => {
       // Add Hover Effects
       // Social Media Functionality
       
-
-      const socialLinks = document.querySelectorAll('footer a');
+  const socialLinks = document.querySelectorAll('footer a');
 
       socialLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
