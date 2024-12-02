@@ -231,3 +231,54 @@ guessForm2.addEventListener('submit', (event) => {
 
         checkoutButton.disabled = cart.length === 0;
       }
+
+      checkoutButton.addEventListener('click', () => {
+        alert('Thank you for your purchase!');
+        cart = [];
+        updateCart();
+      });
+
+      // Contact Form Functionality
+
+      const contactFormm = document.getElementById('contactForm');
+      const nameInput = document.getElementById('my-name');
+      const emailInput = document.getElementById('my-email');
+      const phoneInput = document.getElementById('my-phone');
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const phoneError = document.getElementById('phoneError');
+
+      contactFormm.addEventListener('submit', (event) => {
+        let isValid = true;
+
+        // Clear previous error messages
+      nameError.textContent = '';
+      emailError.textContent = '';
+      phoneError.textContent = '';
+
+      // Validate name
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Please enter your name.';
+        isValid = false;
+      }
+
+      // Validate email
+
+      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        isValid = false;
+      }
+      
+      if (phoneInput.value.length > 0 && !/^\d{3}-\d{3}-\d{4}$/.test(phoneInput.value)) { // Example US phone format
+        phoneError.textContent = 'Please enter a valid phone number (e.g., 123-456-7890).';
+        isValid = false;
+      }
+
+      // If there are errors, prevent form submission
+
+      if (!isValid) {
+        event.preventDefault();
+      }
+      });
+
+
