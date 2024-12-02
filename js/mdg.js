@@ -31,12 +31,20 @@ obj.SayHello("You are welcome.");
 // End of JavaScript Obfuscator
 						
 // Use document.getElementById("id").innerHTML to select the element with the ID dark-mode-toggle.
+
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-const background = document.querySelector('.background');
+const body = document.body;
+
+// Check if dark mode is enabled in local storage
+const isDarkMode = localStorage.getItem('dark-mode') === 'enabled';
+
+// Set initial state based on local storage
+if (isDarkMode) {
+  enableDarkMode();
+}
 
 darkModeToggle.addEventListener('click', () => {
-  const isDarkModeEnabled = document.body.classList.contains('dark-mode');
-  if (isDarkModeEnabled) {
+  if (body.classList.contains('dark-mode')) {
      disableDarkMode();
   } else {
     enableDarkMode();
@@ -44,24 +52,9 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 function enableDarkMode() {
-  document.body.classList.add('dark-mode');
-  background.style.display = 'block';
+  body.classList.add('dark-mode');
   localStorage.setItem('dark-mode', 'enabled');
 }
-// The disableDarkMode function removes the dark-mode class from the body element and removes the dark-mode key from localStorage.
-const disableDarkMode = () => {
-  document.body.classList.remove('dark-mode');
-  localStorage.removeItem('dark-Mode');
-};
-
-darkModeToggle.addEventListener('click', () => {
-  const isDarkModeEnabled = document.body.classList.contains('dark-mode');
-  if (isDarkModeEnabled) {
-    disableDarkMode();
-  } else {
-    enableDarkMode();
-  }
-});
 
 function enableDarkMode() {
   document.body.classList.add('dark-mode');
@@ -70,14 +63,8 @@ function enableDarkMode() {
 }
 
 function disableDarkMode() {
-  document.body.classList.remove('dark-mode');
-  background.style.display = 'none'; // Hide the background overlay
+  body.classList.remove('dark-mode');
   localStorage.removeItem('dark-mode'); // Corrected ('dark-Mode to dark-mode')
-}
-
-const darkModePreference = localStorage.getItem('dark-mode');
-if (darkModePreference === 'enabled') {
-  enableDarkMode();
 }
 
 // No need for remove DarkMode() function
