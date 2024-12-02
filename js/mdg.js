@@ -172,3 +172,15 @@ guessForm2.addEventListener('submit', (event) => {
 
   guessInput2.value = ''; 
   });
+
+  // Shopping Cart Functionality
+
+  const products = document.querySelectorAll('.product');
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+  const cartItems = document.getElementById('itemList1');
+
+  const subtotal = document.getElementById('subtotal');
+  const tax = document.getElementById('tax1');
+  const shipping = document.getElementById('shipping1');
+  const total = document.getElementById('total1');
+  const checkoutButton = document.getElementById('checkout1');
