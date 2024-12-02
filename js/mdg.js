@@ -281,4 +281,17 @@ guessForm2.addEventListener('submit', (event) => {
       }
       });
 
+      // Add Hover Effects
+      // Social Media Functionality
+      
 
+      const socialLinks = document.querySelectorAll('footer a');
+
+      socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          link.querySelector('svg').classList.add('hover');
+        });
+        link.addEventListener('mouseout', () => {
+          link.querySelector('svg').classList.remove('hover');
+        });
+      });
