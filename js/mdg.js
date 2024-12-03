@@ -73,7 +73,6 @@ function disableDarkMode() {
 const product1 = document.getElementById('product1');
 const product2 = document.getElementById('product2');
 const product3 = document.getElementById('product3');
-
 const product4 = document.getElementById('product4');
 
 const btn1 = document.getElementById('btn1');
@@ -101,6 +100,9 @@ btn4.addEventListener('click', () => showProduct(product4));
 // Show the first product
 
 showProduct(product1);
+
+// Guessing Game 2
+// Return a random number between 1 and 10
 
 const guessForm1 = document.getElementById('guessGame');
 const guessInput1 = document.getElementById('numGuess');
@@ -160,7 +162,7 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
   randomNumDisplay.textContent = `Winning Number: ${randomNumber}`;
 
   if (userGuess === randomNumber) {
-    gameMessage.textContent = 'Congratulations! You guessed the number.';
+    gameOutput2.textContent = `Congratulations! You guessed the number ${randomNumber}.`;
   } else {
     gameMessage.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`; 
   }
@@ -209,14 +211,17 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
         let subtotalAmount = 0;
 
         cart.forEach(item => {
-          const listItem = document.createElement('li');
-          li.textContent = `${item.quantity} x ${item.name} - $${item.price * item.quantity}`;
-          cartItems.appendChild(li);
+  const listItem = document.createElement('li');
+          listItem.textContent = `${item.quantity} x ${item.name} - $${item.price * item.quantity}`;
+          cartItems.appendChild(listItem);
 
           subtotalAmount += item.price * item.quantity;
         });
 
+  // Correct calculation of tax amount (tax rate applied to subtotal)
+
   const taxAmount = subtotalAmount * 0.8; // Assuming a tax rate of 8%
+  
   const shippingCost = 10; // Assuming a flat shipping cost of $10
   const totalAmount = subtotalAmount + taxAmount + shippingCost;
 
