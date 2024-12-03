@@ -128,6 +128,15 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 });
 
 // Guessing Game 2
+// Return a random number between 1 and 10
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+for (let i = 0; i < 5; i++) {
+  const randomNumber = getRandomNumber(1, 10);
+  console.log(getRandomNumber(1, 10));
+}
 
 const guessForm2 = document.getElementById('guessGame2');
 const guessInput2 = document.getElementById('numGuess2');
