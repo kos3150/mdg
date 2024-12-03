@@ -17,22 +17,22 @@ if (true) {
 
 // Add JavaScript Obfuscator to protect your code below: Remove the following line to enable obfuscation before submitting your JS file for grading.
 
-function NewObject(prefix)
+// function NewObject(prefix)
 {
-    var count=0;
-    this.SayHello=function(msg)
-    {
-        count++;
-        alert(prefix+msg);
-    }
-    this.GetCount=function()
-    {
-        return count;
-    }
-}
+    // var count=0;
+    // this.SayHello=function(msg)
+    // {
+        // count++;
+        // alert(prefix+msg);
+    // }
+    // this.GetCount=function()
+    // {
+        // return count;
+  //}
+// }
 
-var obj=new NewObject("Message : ");
-obj.SayHello("You are welcome.");
+// var obj=new NewObject("Message : ");
+// obj.SayHello("You are welcome.");
 
 // End of JavaScript Obfuscator
 						
