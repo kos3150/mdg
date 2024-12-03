@@ -264,15 +264,15 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 
       // Validate email
 
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-     if (!emailRegex.test(emailInput.value)) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
         emailError.textContent = 'Please enter a valid email address.';
         isValid = false;
       }
 
       // Validate phone number
       
-    const phoneRegex = /^\d{11}$/; // Allows exactly 11 digits
+  const phoneRegex = /^\d{11}$/; // Allows exactly 11 digits
     if (phoneInput.value.trim() !== '' && !phoneRegex.test(phoneInput.value)) {
         phoneError.textContent = 'Please enter a valid 10-digit phone number.';
         isValid = false;
