@@ -169,8 +169,6 @@ label[for="dark-mode-toggle"] {
 	display: block;
 }
 
-
-
 h1, h2, h3, h4{
 	font-weight: bold;
 	margin: 0.5rem;
@@ -435,15 +433,10 @@ p{
 }
 
 /*  Game and Cart Sections  */
-/*  Dark Mode Toggle  */
-#dark-mode-toggle {
-	display: none;
-}
 
 main{
 	background-color: #262223;
-	color:#ffffff;
-	margin: 5px;
+	color:#ffffff;	margin: 5px;
 	align-items: center;
 }
 

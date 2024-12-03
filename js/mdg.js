@@ -1,12 +1,18 @@
 // Kim Smock JavaScript mdg.js
 // <script src="js/mdg.js"></script>
 // Syntax: add "use strict"; at the top of a script or function.
-"use strict";
-console.log("Strict mode is enabled");
-function myFunction() {
+
+function strict() {
     "use strict";
-    let x = 3.14;
-    console.log(x);
+}
+    
+function strict() {
+  "use strict";
+}
+if (true) {
+        function test() {
+            let x = 1;
+    }
 }
 
 // Add JavaScript Obfuscator to protect your code below: Remove the following line to enable obfuscation before submitting your JS file for grading.
