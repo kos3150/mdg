@@ -220,7 +220,7 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 
       // Contact Form Functionality
 
-  const contactFormm = document.getElementById('contactForm');
+  const contactForm = document.getElementById('contactForm');
   const nameInput = document.getElementById('my-name');
   const emailInput = document.getElementById('my-email');
   const phoneInput = document.getElementById('my-phone');
@@ -228,10 +228,10 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
   const emailError = document.getElementById('emailError');
   const phoneError = document.getElementById('phoneError');
 
-      contactFormm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', (event) => {
         let isValid = true;
 
-        // Clear previous error messages
+  // Clear previous error messages
       nameError.textContent = '';
       emailError.textContent = '';
       phoneError.textContent = '';
@@ -244,13 +244,17 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 
       // Validate email
 
-      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(emailInput.value)) {
         emailError.textContent = 'Please enter a valid email address.';
         isValid = false;
       }
+
+      // Validate phone number
       
-      if (phoneInput.value.length > 0 && !/^\d{3}-\d{3}-\d{4}$/.test(phoneInput.value)) { // Example US phone format
-        phoneError.textContent = 'Please enter a valid phone number (e.g., 123-456-7890).';
+    const phoneRegex = /^\d{11}$/; // Allows exactly 11 digits
+    if (phoneInput.value.trim() !== '' && !phoneRegex.test(phoneInput.value)) {
+        phoneError.textContent = 'Please enter a valid 10-digit phone number.';
         isValid = false;
       }
 
