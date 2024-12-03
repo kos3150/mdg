@@ -239,8 +239,8 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
       });
 
       // Contact Form Functionality
-
-  const contactForm = document.getElementById('contactForm');
+      
+      const contactForm = document.getElementById('contactForm');
   const nameInput = document.getElementById('my-name');
   const emailInput = document.getElementById('my-email');
   const phoneInput = document.getElementById('my-phone');
@@ -297,4 +297,4 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
         link.addEventListener('mouseout', () => {
           link.querySelector('svg').classList.remove('hover');
         });
-      });
+      })};
