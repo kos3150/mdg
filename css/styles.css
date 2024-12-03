@@ -163,14 +163,13 @@ label[for="dark-mode-toggle"] {
 }
 
 .background {
-	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8); /*Adjust the opacity value as needed */
+	background-color: rgba(131, 130, 130, 0.8); /*Adjust the opacity value as needed */
 	z-index: 999;
 }
 
@@ -211,8 +210,6 @@ header {
 	color:#f2994b;
 }
 
-
-
 label[for="dark-mode-toggle"] {
 	cursor: pointer;
 }
@@ -241,6 +238,8 @@ header p {
 header a {
 	color: #ffffff;
 	text-decoration: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /* -- NAVIGATION STYLES -- */
@@ -318,9 +317,6 @@ button {
 button:hover {
 	background-color: #f2994b;
 }
-
-
-
 
 p{
 	font-size: 16px;
